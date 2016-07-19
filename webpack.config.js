@@ -50,7 +50,7 @@ var config = getConfig({
     in: join(src, 'app.js'),
     out: dest,
     html: function(context) {
-        context.title = "Kelp Clone"
+        context.title = "My App"
         return {
             'index.html': context.defaultTemplate(),
         }

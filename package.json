@@ -1,7 +1,7 @@
 {
-  "name": "yelp-clone",
+  "name": "github-dashboard",
   "version": "1.0.0",
-  "description": "From",
+  "description": "React Redux with Github OAuth",
   "main": "webpack.config.js",
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/hjs-dev-server",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stujo/javascript-yelp-clone.git"
+    "url": "git+https://github.com/stujo/github-dashboard.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "stujo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stujo/javascript-yelp-clone/issues"
+    "url": "https://github.com/stujo/github-dashboard/issues"
   },
-  "homepage": "https://github.com/stujo/javascript-yelp-clone#readme",
+  "homepage": "https://github.com/stujo/github-dashboard#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.10.4",
@@ -62,7 +62,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "font-awesome": "^4.6.3",
-    "google-maps-react": "^1.0.16",
     "normalize.css": "^4.2.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
