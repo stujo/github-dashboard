@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 
 import { browserHistory, Router, Route, Redirect } from 'react-router'
 
@@ -17,12 +17,15 @@ import routes from './routes'
 
 import reducers from './reducers'
 
+import createLogger from 'redux-logger';
+
+
 // Dan Abramov calls this  'Provider' : https://www.youtube.com/watch?v=VJ38wSFbM3A
 import StoreContextProvider from 'components/StoreContextProvider/StoreContextProvider'
 
 const mountNode = document.querySelector('#root');
 
-const store = createStore(reducers)
+const store = createStore(reducers, applyMiddleware(createLogger()))
 
 
 // Create an enhanced history that syncs navigation events with the store
