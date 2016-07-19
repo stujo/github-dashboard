@@ -1,0 +1,10 @@
+@import url("../../styles/base.css");
+
+.wrapper {
+ 
+}
+
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+}
