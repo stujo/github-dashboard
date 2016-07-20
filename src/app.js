@@ -19,9 +19,7 @@ import reducers from './reducers'
 
 import createLogger from 'redux-logger';
 
-
-// Dan Abramov calls this  'Provider' : https://www.youtube.com/watch?v=VJ38wSFbM3A
-import StoreContextProvider from 'components/StoreContextProvider/StoreContextProvider'
+import { Provider } from 'react-redux';
 
 const mountNode = document.querySelector('#root');
 
@@ -43,9 +41,9 @@ window.githubDashboard = {
 
 function render() {
     ReactDOM.render(
-        <StoreContextProvider store={ store }>
+        <Provider store={ store }>
           <Router routes={ routes } history={ syncedHistory } />
-        </StoreContextProvider>,
+        </Provider>,
         mountNode
     );
 }

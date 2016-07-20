@@ -1,25 +1,28 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow } from 'enzyme'
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
+import { Provider } from 'react-redux';
 
 import HomeContainer from './HomeContainer'
-import Sidebar from 'components/Sidebar/Sidebar'
 
-import Map, { GoogleApiWrapper } from 'google-maps-react'
+import { storeFake } from 'utils/storeFake';
+
 
 describe('<HomeContainer />', function() {
+
 let wrapper;
+let store;
+
 beforeEach(() => {
-    wrapper = mount(<HomeContainer />)
+    store = storeFake();
+    wrapper = mount(<Provider store={ store }>
+                      <HomeContainer />
+                    </Provider>);
 })
 
-it('Initializes the Sidebar title', () => {
-    expect(wrapper.find(Sidebar).props().title).to.eq('Restaurants')
+it('Says Hello World', () => {
+    expect(wrapper.text()).to.eq('Hello World')
 });
 
-it('has a Map component', () => {
-    expect(wrapper.find(Map)).to.have.length(1);
-});
 
 });
