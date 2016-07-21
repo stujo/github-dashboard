@@ -6,9 +6,12 @@
 }
 
 .content {
-
+  width: 100%;
+  min-height: 100px;
+  text-align: center;
 }
 
 .title {
-
+  text-align: center;
+   border-bottom: 1px solid #ddd;
 }
